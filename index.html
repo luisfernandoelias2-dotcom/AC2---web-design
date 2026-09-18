@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rosita Doces</title>
+
+    <!-- Ligação com o CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SLIDER
+    ===================================================== -->
+
+    <section class="slider">
+
+
+        <!-- =================================================
+             SLIDE 1
+        ================================================= -->
+
+        <div class="slide ativo">
+
+            <!-- FOTO -->
+            <img
+                src="imagem1.jpg"
+                alt="Bolos da Rosita Doces"
+            >
+
+            <!-- TEXTO -->
+            <div class="conteudo-slide">
+
+                <div class="frase-pequena">
+                    Todos os produtos usados são
+                     da mais alta qualidade
+                </div>
+
+                <h1>
+                    Doces 100% Gourmet
+                </h1>
+
+                <p>
+                    Vendemos para Sorocaba 
+                </p>
+                
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SLIDE 2
+        ================================================= -->
+
+        <div class="slide">
+
+            <!-- FOTO -->
+            <img
+                src="imagem2.jpg"
+                alt="Goiabada Zélia"
+            >
+
+            <!-- TEXTO -->
+            <div class="conteudo-slide">
+
+                <div class="frase-pequena">
+                    Fomos ELEITOS uma das melhores
+                    do país pela revista Estadão
+                </div>
+
+                <h1>
+                    Muito mais sabor
+                    e qualidade
+                </h1>
+
+                <p>
+                    Para você e para toda
+                    a sua família.
+                </p>
+
+        
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SLIDE 3
+        ================================================= -->
+
+        <div class="slide">
+
+            <!-- FOTO -->
+            <img
+                src="imagem3.jpg"
+                alt="Produtos Goiabada Zélia"
+            >
+
+            <!-- TEXTO -->
+            <div class="conteudo-slide">
+
+                <div class="frase-pequena">
+                    Fomos ELEITOS uma das melhores
+                    do país pela revista Estadão
+                </div>
+
+                <h1>
+                    Frutas rigorosamente
+                    selecionadas
+                </h1>
+
+                <p>
+                    Selecionamos somente as melhores
+                    frutas para garantir a qualidade total
+                    dos produtos.
+                </p>
+
+                
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SETA ESQUERDA
+        ================================================= -->
+
+        <button
+            class="seta seta-esquerda"
+            onclick="slideAnterior()"
+        >
+            &#10094;
+        </button>
+
+
+        <!-- =================================================
+             SETA DIREITA
+        ================================================= -->
+
+        <button
+            class="seta seta-direita"
+            onclick="proximoSlide()"
+        >
+            &#10095;
+        </button>
+
+
+        <!-- =================================================
+             INDICADORES
+        ================================================= -->
+
+        <div class="indicadores">
+
+            <button
+                class="indicador ativo"
+                onclick="irParaSlide(0)"
+            ></button>
+
+            <button
+                class="indicador"
+                onclick="irParaSlide(1)"
+            ></button>
+
+            <button
+                class="indicador"
+                onclick="irParaSlide(2)"
+            ></button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Ligação com o JavaScript -->
+    <script src="script.js"></script>
+<br>
+
+<h2 align="center">Sobre Nós</h2>
+    <p> </p>
+</body>
+
+</html>
