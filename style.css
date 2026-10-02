@@ -1,0 +1,1117 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+
+
+
+/* =====================================================
+   CABEÇALHO FIXO
+===================================================== */
+
+.cabecalho {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 105px;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    z-index: 1000;
+
+    border-bottom: 3px solid #bd2929;
+}
+
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+
+    color: #bd2929;
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 10px;
+
+    transform: translateX(-50%);
+
+    width: 180px;
+
+    height: auto;
+
+    z-index: 1001;
+}
+
+
+
+/* =====================================================
+   BOTÕES DO CABEÇALHO
+===================================================== */
+
+.botoes {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.botao {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 40px;
+
+    padding: 0 25px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border-radius: 3px;
+}
+
+
+
+/* FALE CONOSCO */
+
+.fale-conosco {
+
+    background-color: #ffd45c;
+
+    color: #bd2929;
+}
+
+
+
+/* PEDIR ORÇAMENTO */
+
+.pedir-orcamento {
+
+    background-color: #bd2929;
+
+    color: white;
+}
+
+
+
+/* =====================================================
+   ÁREA DO SLIDER
+===================================================== */
+
+.slider {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 700px;
+
+    overflow: hidden;
+
+    margin-top: 105px;
+}
+
+
+
+/* =====================================================
+   CADA SLIDE
+===================================================== */
+
+.slide {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+/* =====================================================
+   SLIDE ATIVO
+===================================================== */
+
+.slide.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+
+/* =====================================================
+   FOTO DO SLIDE
+===================================================== */
+
+.slide img {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+
+/* =====================================================
+   CAMADA VERMELHA
+===================================================== */
+
+.slide::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+
+            rgba(180, 25, 30, 0.95) 0%,
+
+            rgba(180, 25, 30, 0.90) 20%,
+
+            rgba(180, 25, 30, 0.65) 45%,
+
+            rgba(180, 25, 30, 0.30) 70%,
+
+            rgba(180, 25, 30, 0.05) 100%
+        );
+
+    z-index: 1;
+}
+
+
+
+/* =====================================================
+   CONTEÚDO DO SLIDE
+===================================================== */
+
+.conteudo-slide {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 90px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80%;
+
+    max-width: 1000px;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+
+/* =====================================================
+   FRASE PEQUENA
+===================================================== */
+
+.conteudo-slide .frase-pequena {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.conteudo-slide h1 {
+
+    font-size: 55px;
+
+    line-height: 1.05;
+
+    color: #ffe36e;
+
+    margin-bottom: 25px;
+
+    font-weight: bold;
+}
+
+
+
+/* =====================================================
+   TEXTO DO SLIDE
+===================================================== */
+
+.conteudo-slide p {
+
+    font-size: 27px;
+
+    line-height: 1.4;
+
+    margin: 0 auto;
+
+    max-width: 900px;
+}
+
+
+
+/* =====================================================
+   SETAS
+===================================================== */
+
+.seta {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 60px;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+    transition: 0.3s;
+}
+
+
+.seta:hover {
+
+    transform: translateY(-50%) scale(1.15);
+}
+
+
+.seta-esquerda {
+
+    left: 20px;
+}
+
+
+.seta-direita {
+
+    right: 20px;
+}
+
+
+
+/* =====================================================
+   INDICADORES
+===================================================== */
+
+.indicadores {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.indicador {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+}
+
+
+.indicador.ativo {
+
+    background-color: white;
+}
+
+
+
+/* =====================================================
+   SOBRE NÓS
+===================================================== */
+
+.sobre-secao {
+
+    padding: 80px 20px;
+
+    background-color: white;
+}
+
+
+.sobre-nos {
+
+    text-align: center;
+
+    font-size: 36px;
+
+    line-height: 1.4;
+
+    margin: 0 auto 40px;
+
+    max-width: 900px;
+
+    color: #8b3a3a;
+}
+
+
+.texto {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #444;
+}
+
+
+.texto h2 {
+
+    color: #8b3a3a;
+
+    margin-bottom: 20px;
+}
+
+
+.texto p {
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =====================================================
+   NOSSO PROPÓSITO
+===================================================== */
+
+.destaque {
+
+    max-width: 900px;
+
+    margin: 40px auto 0;
+
+    padding: 30px;
+
+    background-color: #fff5f5;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #444;
+}
+
+
+.nosso-proposito {
+
+    font-size: 30px;
+
+    line-height: 1.4;
+
+    margin-bottom: 15px;
+
+    color: #8b3a3a;
+}
+
+
+
+/* =====================================================
+   NOSSOS PRODUTOS
+===================================================== */
+
+.produtos {
+
+    width: 100%;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background-color: #fff;
+}
+
+
+.produtos h2 {
+
+    font-size: 36px;
+
+    color: #8b3a3a;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitulo {
+
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 40px;
+}
+
+
+
+/* =====================================================
+   CONTAINER DOS PRODUTOS
+===================================================== */
+
+.produtos-container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* =====================================================
+   CARD DO PRODUTO
+===================================================== */
+
+.produto-card {
+
+    width: 300px;
+
+    padding: 20px;
+
+    background-color: #fff5f5;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+
+.produto-card:hover {
+
+    transform: translateY(-8px);
+}
+
+
+
+/* =====================================================
+   IMAGEM DO PRODUTO
+===================================================== */
+
+.produto-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+
+/* =====================================================
+   NOME DO PRODUTO
+===================================================== */
+
+.produto-card h3 {
+
+    font-size: 24px;
+
+    color: #8b3a3a;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* =====================================================
+   DESCRIÇÃO DO PRODUTO
+===================================================== */
+
+.produto-card p {
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =====================================================
+   BOTÃO DO PRODUTO
+===================================================== */
+
+.botao-produto {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #8b3a3a;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.botao-produto:hover {
+
+    background-color: #6f2929;
+
+    transform: scale(1.02);
+}
+
+
+
+/* =====================================================
+   CONTATE-NOS
+===================================================== */
+
+.contato {
+
+    width: 100%;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background-color: #fff5f5;
+}
+
+
+.contato h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+
+    color: #8b3a3a;
+}
+
+
+.contato > p {
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+    color: #555;
+}
+
+
+
+/* =====================================================
+   CAIXA DO WHATSAPP
+===================================================== */
+
+.whatsapp-box {
+
+    width: 90%;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* =====================================================
+   ÍCONE DO WHATSAPP
+===================================================== */
+
+.whatsapp-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #25D366;
+
+    border-radius: 50%;
+}
+
+
+.whatsapp-icon span {
+
+    font-size: 35px;
+
+    color: white;
+}
+
+
+
+/* =====================================================
+   TÍTULO DO WHATSAPP
+===================================================== */
+
+.whatsapp-box h3 {
+
+    font-size: 24px;
+
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+
+.whatsapp-box p {
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =====================================================
+   CAMPO DE MENSAGEM
+===================================================== */
+
+.whatsapp-box textarea {
+
+    width: 100%;
+
+    height: 120px;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    resize: none;
+
+    outline: none;
+}
+
+
+.whatsapp-box textarea:focus {
+
+    border-color: #25D366;
+}
+
+
+
+/* =====================================================
+   BOTÃO DO WHATSAPP
+===================================================== */
+
+#botaoWhatsApp {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #25D366;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#botaoWhatsApp:hover {
+
+    background-color: #1ebe5d;
+
+    transform: scale(1.02);
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+
+        height: 85px;
+    }
+
+
+    .slider {
+
+        margin-top: 85px;
+
+        height: 750px;
+    }
+
+
+    .menu {
+
+        gap: 12px;
+    }
+
+
+    .menu a {
+
+        font-size: 12px;
+    }
+
+
+    .logo {
+
+        width: 150px;
+
+        top: 5px;
+    }
+
+
+    .botoes {
+
+        gap: 5px;
+    }
+
+
+    .botao {
+
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+
+    .conteudo-slide {
+
+        top: 70px;
+
+        width: 88%;
+    }
+
+
+    .conteudo-slide .frase-pequena {
+
+        font-size: 25px;
+    }
+
+
+    .conteudo-slide h1 {
+
+        font-size: 42px;
+    }
+
+
+    .conteudo-slide p {
+
+        font-size: 23px;
+    }
+
+
+    .seta {
+
+        font-size: 45px;
+    }
+
+}
+
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .cabecalho {
+
+        height: 85px;
+    }
+
+
+    .slider {
+
+        margin-top: 85px;
+
+        height: 750px;
+    }
+
+
+    .menu {
+
+        display: none;
+    }
+
+
+    .botoes {
+
+        display: none;
+    }
+
+
+    .logo {
+
+        width: 150px;
+
+        top: 5px;
+    }
+
+
+    .conteudo-slide {
+
+        top: 70px;
+
+        width: 90%;
+    }
+
+
+    .conteudo-slide .frase-pequena {
+
+        font-size: 21px;
+    }
+
+
+    .conteudo-slide h1 {
+
+        font-size: 38px;
+    }
+
+
+    .conteudo-slide p {
+
+        font-size: 21px;
+    }
+
+
+    .seta {
+
+        font-size: 40px;
+
+        padding: 10px;
+    }
+
+
+    .seta-esquerda {
+
+        left: 5px;
+    }
+
+
+    .seta-direita {
+
+        right: 5px;
+    }
+
+
+    .sobre-nos {
+
+        font-size: 30px;
+    }
+
+
+    .texto {
+
+        font-size: 16px;
+    }
+
+
+    .produtos h2 {
+
+        font-size: 30px;
+    }
+
+
+    .contato h2 {
+
+        font-size: 30px;
+    }
+
+
+    .whatsapp-box {
+
+        padding: 25px;
+    }
+
+}
